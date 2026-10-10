@@ -14,6 +14,6 @@ RUN apt-get -qq update && apt-get -qq install \
       && rm -rf /var/lib/apt/lists/*
 
 USER 1000
-ADD pinboard.xsd *.sh /srv/
+ADD pinboard.xsd backup.sh /srv/
 
-ENTRYPOINT ["/srv/pinboard-backup.sh"]
+ENTRYPOINT ["/srv/backup.sh"]
